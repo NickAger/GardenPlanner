@@ -3,7 +3,7 @@ module Main where
 import           Data.List
 import           Control.Monad
 
-data PlantType = Potatoes | Onions | Garlic | Parsley | Cariander | Cucumber | Beetroot | SpringOnions | SweetCorn | Carrots | Leaks | FrenchBeans | Peas | Dill | Radsh deriving (Eq, Show)
+data PlantType = Potatoes | Onions | Garlic | Parsley | Coriander | Cucumber | Beetroot | SpringOnions | SweetCorn | Carrots | Leaks | FrenchBeans | Peas | Dill | Radish deriving (Eq, Show)
 
 data BedProportion = Quarter | Half | Eighth | Tenth deriving (Eq, Show)
 
@@ -21,7 +21,7 @@ plants =
   , Plant Onions       Quarter Neutral     [Garlic]
   , Plant Garlic       Eighth  Repellant   [Onions]
   , Plant Parsley      Eighth  Neutral     []
-  , Plant Cariander    Quarter Neutral     []
+  , Plant Coriander    Quarter Neutral     []
   , Plant Cucumber     Half    Neutral     []
   , Plant Beetroot     Quarter Neutral     []
   , Plant SpringOnions Quarter Neutral     []
@@ -31,7 +31,7 @@ plants =
   , Plant FrenchBeans  Eighth  Neutral     []
   , Plant Peas         Eighth  Neutral     []
   , Plant Dill         Tenth   Neutral     []
-  , Plant Radsh        Tenth   Neutral     []
+  , Plant Radish       Tenth   Neutral     []
   ]
 
 valueToBedProportion Quarter = 2.5
