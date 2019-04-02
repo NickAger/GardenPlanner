@@ -1,0 +1,68 @@
+-- Haskell Playground 1.0
+filter ((> 1) . length) $ subsequences [1,2,3,4]
+-- [[1,2],[1,3],[2,3],[1,2,3],[1,4],[2,4],[1,2,4],[3,4],[1,3,4],[2,3,4],[1,2,3,4]]
+mySubsequences [1,2,3,4]
+-- [[1,2],[1,3],[1,4],[1,2,3],[1,2,4],[1,2,3,4],[2,3],[2,4],[2,3,4],[3,4]]
+
+
+
+let plantComb = plantCombinations plants
+length plantComb
+
+let plantComb3 = plantCombinations3 plants
+length plantComb3
+
+
+
+--mapM_ (\plants -> displayBed "" plants) $ take 74 plantsComb
+
+-- isAphidSafe == 74
+-- without  isAphidSafe == 112
+-- without Carrots Susceptible == 112
+
+
+--containsPlant plant plants = 
+--  any ((== plant) . name) plants
+--
+--any (containsPlant Garlic) plantsComb 
+
+
+      
+--let beds = bedCombinations
+--top beds
+--length beds
+
+--displayCombinations $ beds
+--
+
+--
+
+
+-- displayCombinations plantsComb
+
+--let withParsley = filter containsParsley plantsComb
+--length withParsley
+--
+
+
+--tails plants
+
+
+take 1 $ tails [1,2,3, 4, 5]
+
+let comb1 = drop 10 plants
+let comb2 = comb1 ++ [plants !! 0]
+
+isAphidSafe comb2
+areGoodNeighbours comb2
+isFull comb2
+
+
+
+isAphidSafe plants
+areGoodNeighbours plants
+isFull plants
+areGoodNeighbours [plants !! 0, plants !! 2]
+isAphidSafe [plants !! 0, plants !! 2]
+isFull [plants !! 0, plants !! 2]
+ 

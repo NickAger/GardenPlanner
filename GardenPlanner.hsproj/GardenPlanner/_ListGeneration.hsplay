@@ -1,0 +1,29 @@
+-- Haskell Playground 1.0
+sum [1,2,3]
+
+let a = [1,2,3,4, 5]
+tails a
+
+n = [1..9]
+n
+
+
+pairs a
+
+threes a
+
+
+fours a 
+
+
+take 4 a
+
+
+drop 4 a
+
+combinations4 a
+
+combinations2 a
+
+
+combinations a

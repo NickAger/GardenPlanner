@@ -1,0 +1,24 @@
+-- Haskell Playground 1.0
+
+let xs = [1,2,3,4,5,6]
+[(x,y) | x <- xs, y <- xs]
+
+[(x,y) | x <- xs, y <- xs, x /= y]
+
+tails xs
+
+[ (x,y) | (x:rest) <- tails xs , y <- rest ]
+
+pairs plants
+
+permutations [1,2,3]
+
+[(x, y, z) | x <- pairs plants, y <- pairs plants, z <- pairs plants, noMatchingElements x y, noMatchingElements x z, noMatchingElements y z]
+
+
+length plantCombinations
+
+displayCombination $ head plantCombinations
+--displayCombinations plantCombinations
+
+plantPairs
