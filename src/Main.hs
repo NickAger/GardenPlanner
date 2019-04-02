@@ -26,8 +26,7 @@ plants =
   , Plant Beetroot     Quarter Neutral     []
   , Plant SpringOnions Quarter Neutral     []
   , Plant SweetCorn    Half    Neutral     []
-  , Plant Carrots      Quarter Susceptible {-Repellant-}
-                                           []
+  , Plant Carrots      Quarter Susceptible []
   , Plant Leaks        Quarter Neutral     []
   , Plant FrenchBeans  Eighth  Neutral     []
   , Plant Peas         Eighth  Neutral     []
@@ -49,7 +48,7 @@ isAphidSafe plants =
   in  (anySusceptible && anyRepellant) || not anySusceptible
 
 areGoodNeighbours plants =
-  let allBadNeighbours = nub $ concat $ map badNeighbours plants
+  let allBadNeighbours = nub $ concatMap badNeighbours plants
       plantNames       = map name plants
   in  noMatchingElements plantNames allBadNeighbours
 
