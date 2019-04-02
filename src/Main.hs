@@ -96,7 +96,11 @@ displayBed title plants =
 --
 
 main = do
-  let c = bedCombinations
-  putStrLn $ "number of bed combinations = " ++ (show $ length c)
-  -- displayCombinations bedCombinations
+  let pc = plantCombinations plants
+  putStrLn $ "number of plant combinations in one bed = " ++ (show $ length pc)
+
+  let c                    = bedCombinations
+  let firstTwoCombinations = take 2 c
+  -- putStrLn $ "number of bed combinations = " ++ (show $ length c)
+  displayCombinations firstTwoCombinations
 
