@@ -55,7 +55,7 @@ areGoodNeighbours plants =
 plantsTotal plants = sum $ map (valueToBedProportion . size) plants
 
 isFull :: [Plant] -> Bool
-isFull plants = let existingTotal = plantsTotal plants in existingTotal > 8 && existingTotal < 14
+isFull plants = let existingTotal = plantsTotal plants in existingTotal > 10 && existingTotal < 15
 
 noMatchingElements :: Eq a => [a] -> [a] -> Bool
 noMatchingElements xs ys = unionLength == (length xs) + (length ys) where unionLength = length $ union xs xs
