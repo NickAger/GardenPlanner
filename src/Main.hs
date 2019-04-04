@@ -154,8 +154,6 @@ main = do
   -- let anyCucumber = any (containsPlant Cucumber) c
   -- putStrLn $ "anyCucumber = " ++ show anyCucumber
 
-  -- let firstTwoCombinations = take 2 c
-  -- displayCombinations firstTwoCombinations
   let bestBedCombinations         = bestCombinations c
   let numberOfBestCombinations    = length bestBedCombinations
   let numPlantsInBestCombinations = numberOfPlantsInCombination $ head bestBedCombinations
