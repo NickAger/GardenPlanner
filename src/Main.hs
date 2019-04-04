@@ -144,8 +144,9 @@ main = do
   let pc = plantCombinations plants
   putStrLn $ "Number of plant combinations in one bed = " ++ show (length pc)
 
-  let c = bedCombinations
-  putStrLn $ "Number of bed combinations = " ++ show (length c)
+  let c                       = bedCombinations
+  let numberOfBedCombinations = length c
+  putStrLn $ "Number of bed combinations = " ++ show numberOfBedCombinations
 
   -- let anyPotatoes = any (containsPlant Potatoes) c
   -- putStrLn $ "anyPotatoes = " ++ show anyPotatoes
@@ -155,11 +156,19 @@ main = do
 
   -- let firstTwoCombinations = take 2 c
   -- displayCombinations firstTwoCombinations
-  let bestBeds = bestCombinations c
+  let bestBedCombinations         = bestCombinations c
+  let numberOfBestCombinations    = length bestBedCombinations
+  let numPlantsInBestCombinations = numberOfPlantsInCombination $ head bestBedCombinations
   putStrLn $ "Number of plants to combine = " ++ show (length plants)
-  putStrLn $ "Number of plants in best beds = " ++ show (numberOfPlantsInCombination $ head bestBeds)
-  putStrLn $ "Number of beds with largest number of plants = " ++ show (length bestBeds)
+  putStrLn $ "\nNumber of plants in best bed combinations = " ++ show numPlantsInBestCombinations
+  putStrLn
+    $  "Number of bed combinations containing "
+    ++ show numPlantsInBestCombinations
+    ++ " plants = "
+    ++ (show numberOfBestCombinations)
+    ++ ", ("
+    ++ show ((numberOfBestCombinations * 100) `div` numberOfBedCombinations)
+    ++ "%)"
 
-  putStrLn "\nBeds with largest combinations of plants (first two):"
-  displayCombinations $ take 2 bestBeds
-
+  putStrLn $ "\nBeds containing " ++ show numPlantsInBestCombinations ++ " plants (first two):"
+  displayCombinations $ take 2 bestBedCombinations
